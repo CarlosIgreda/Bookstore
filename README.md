@@ -30,6 +30,7 @@ This project will lay the foundations for my Bookstore website. I will create th
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.hostinger.com/tutorials/what-is-react">REACT</a></li>
+    <li><a href="https://redux-toolkit.js.org/">REDUX TOOLKIT</a></li>
   </ul>
 </details>
 
@@ -53,6 +54,10 @@ This project will lay the foundations for my Bookstore website. I will create th
 - **Comply with linters**
 - **Use React components**
 - **Use React Router**
+- **Understand the concept of state management**
+- **Use store, actions, and reducers in React**
+- **Setup a Redux store**
+- **Create a slice to save state and reducers**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +108,7 @@ and use this commands to initiliaze all packages:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Redux**
+- [ ] **Use of Dispatch**
 - [ ] **Mobile version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
