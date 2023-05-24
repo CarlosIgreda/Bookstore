@@ -82,17 +82,15 @@ In order to run this project you need:
 
 ### Setup
 
-**Install section**
-
 Clone this repository to your desired folder:
 
 ```sh
   cd [my-folder]
   git clone "putHereRepoLink"
 ```
-**Usage Section**
+### Usage Section
 
-and use this commands to initiliaze all packages:
+Use this commands to initiliaze all packages:
 
 ```sh
   npm install
