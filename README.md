@@ -88,12 +88,19 @@ Clone this repository to your desired folder:
   cd [my-folder]
   git clone "putHereRepoLink"
 ```
-### Usage Section
+### Install Section
 
-Use this commands to initiliaze all packages:
+Use this command to initiliaze all packages:
 
 ```sh
   npm install
+```
+
+### Usage Section
+
+Use this command to open the web server:
+
+```sh
   npm start
 ```
 
