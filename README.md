@@ -58,6 +58,7 @@ This project will lay the foundations for my Bookstore website. I will create th
 - **Use store, actions, and reducers in React**
 - **Setup a Redux store**
 - **Create a slice to save state and reducers**
+- **Connect React and Redux**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +118,7 @@ Use this command to open the web server:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Use of Dispatch**
+- [ ] **Connect to API**
 - [ ] **Mobile version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
