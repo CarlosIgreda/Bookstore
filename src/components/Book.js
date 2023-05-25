@@ -1,22 +1,34 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 
 const Book = ({
-  id, title, author, handleDelete,
-}) => (
-  <article key={id}>
-    <h2>{title}</h2>
-    <p>{author}</p>
-    <button type="button" onClick={() => handleDelete(id)}>
-      Delete
-    </button>
-  </article>
-);
+  itemId,
+  title,
+  author,
+}) => {
+  const dispatch = useDispatch();
+  const handleRemove = () => {
+    dispatch(removeBook(itemId));
+  };
 
+  return (
+    <>
+      <div>
+        <h2>{title}</h2>
+        <p>{author}</p>
+      </div>
+      <div>
+        <button type="button">comments</button>
+        <button type="button" onClick={handleRemove}>remove</button>
+      </div>
+    </>
+  );
+};
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  handleDelete: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Book;

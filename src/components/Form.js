@@ -1,65 +1,72 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-const authors = [
-  'Ernest Hemingway',
-  'Franz Kafka',
-  'James Joyce',
-  'Mark Twain',
-];
+const Form = () => {
+  const dispatch = useDispatch();
 
-const Form = ({ onSubmit }) => {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [formData, setFormData] = useState({
+    itemId: '',
+    author: '',
+    title: '',
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit({ title, author });
-    setTitle('');
-    setAuthor('');
+  const onStateUpdate = ({ target }) => {
+    setFormData({
+      ...formData,
+      [target.name]: target.value,
+    });
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    if (formData.author.trim() === '' || formData.title.trim() === '') {
+      return;
+    }
+
+    dispatch(addBook({
+      ...formData,
+      itemId: uuidv4(),
+    }));
+
+    setFormData({
+      itemId: '',
+      author: '',
+      title: '',
+    });
   };
 
   return (
-    <section>
+    <div>
       <h3>ADD NEW BOOK</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <label htmlFor="title" className="visually-hidden">
           Title
           <input
             type="text"
             name="title"
             id="title"
-            placeholder="Book Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Title"
+            value={formData.title}
+            onChange={onStateUpdate}
           />
         </label>
         <label htmlFor="author" className="visually-hidden">
           Author
-          <select
+          <input
             name="author"
             id="author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-          >
-            <option value="" disabled hidden>
-              Select an Author
-            </option>
-            {authors.map((authorName) => (
-              <option key={authorName} value={authorName}>
-                {authorName}
-              </option>
-            ))}
-          </select>
+            value={formData.author}
+            onChange={onStateUpdate}
+            placeholder="Author"
+          />
         </label>
-        <button type="submit">Add Book</button>
+        <button type="submit">ADD BOOK</button>
       </form>
-    </section>
+    </div>
   );
-};
-
-Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Form;
