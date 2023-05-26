@@ -59,6 +59,7 @@ This project will lay the foundations for my Bookstore website. I will create th
 - **Setup a Redux store**
 - **Create a slice to save state and reducers**
 - **Connect React and Redux**
+- **Connect an existing API via Redux and use the data to display something in a UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
