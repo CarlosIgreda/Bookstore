@@ -119,7 +119,7 @@ Use this command to open the web server:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Connect to API**
+- [ ] **Styling**
 - [ ] **Mobile version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
