@@ -3,8 +3,12 @@ import List from './List';
 
 const Books = () => (
   <>
-    <Nav />
-    <List />
+    <header>
+      <Nav />
+    </header>
+    <main>
+      <List />
+    </main>
   </>
 );
 
