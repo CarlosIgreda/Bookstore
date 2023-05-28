@@ -40,7 +40,6 @@ const List = () => {
       <div>
         {content}
       </div>
-      <hr />
       <Form />
     </div>
   );
