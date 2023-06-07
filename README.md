@@ -66,7 +66,7 @@ This project will lay the foundations for my Bookstore website. I will create th
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Not available yet
+- [Live site](https://bookstore-com.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
